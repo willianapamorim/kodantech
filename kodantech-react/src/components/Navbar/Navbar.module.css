@@ -1,0 +1,62 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6%;
+  background: rgba(10, 12, 15, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+}
+
+.navLinks {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.navLinks a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--cyan);
+}
+
+.navCta {
+  background: var(--cyan);
+  color: var(--bg);
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.navCta:hover {
+  background: var(--cyan-dim);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+}

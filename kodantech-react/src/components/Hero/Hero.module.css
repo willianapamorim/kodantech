@@ -1,0 +1,354 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 6% 160px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 65% 50%,
+      rgba(0, 229, 200, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 10% 80%,
+      rgba(0, 229, 200, 0.05) 0%,
+      transparent 60%
+    );
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 200, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 60% 50%, black 20%, transparent 75%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  padding-bottom: 80px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 229, 200, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  color: var(--cyan);
+  font-weight: 400;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.accent {
+  color: var(--cyan);
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 420px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.btnPrimary {
+  background: var(--cyan);
+  color: var(--bg);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnPrimary:hover {
+  background: var(--cyan-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 229, 200, 0.25);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnGhost:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* Hero Stats */
+.heroStat {
+  position: absolute;
+  bottom: 40px;
+  left: 6%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeUp 0.6s 0.5s ease both;
+  z-index: 1;
+}
+
+.statItem {
+  text-align: left;
+}
+
+.statNum {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cyan);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+/* Hero Visual */
+.heroVisual {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  max-width: 620px;
+  animation: fadeIn 1s 0.4s ease both;
+}
+
+.browserMockup {
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 229, 200, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.browserBar {
+  background: var(--surface2);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.browserDots {
+  display: flex;
+  gap: 6px;
+}
+
+.browserDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dotR {
+  background: #ff5f57;
+}
+.dotY {
+  background: #febc2e;
+}
+.dotG {
+  background: #28c840;
+}
+
+.browserUrl {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  flex: 1;
+}
+
+.browserContent {
+  padding: 24px;
+  min-height: 320px;
+  background: linear-gradient(135deg, #0f1318 0%, #131820 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mockHeroBar {
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mockLogoDot {
+  width: 60px;
+  height: 8px;
+  background: var(--cyan);
+  border-radius: 4px;
+}
+
+.mockNavDots {
+  display: flex;
+  gap: 8px;
+}
+
+.mockNavDots span {
+  width: 30px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.mockHeadline {
+  width: 70%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.mockSubline {
+  width: 50%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.mockCards {
+  display: flex;
+  gap: 12px;
+}
+
+.mockCard {
+  flex: 1;
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid rgba(0, 229, 200, 0.1);
+}
+
+.mockCardLineT {
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  background: var(--cyan);
+  width: 50%;
+}
+
+.mockCardLineB {
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mockCardBtn {
+  margin-top: 10px;
+  background: rgba(0, 229, 200, 0.2);
+  border-radius: 4px;
+  height: 20px;
+  width: 60px;
+}
+
+.mockGlow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 229, 200, 0.12) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .heroVisual {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+    margin-top: 40px;
+  }
+
+  .heroStat {
+    position: static;
+    margin-top: 40px;
+  }
+}
