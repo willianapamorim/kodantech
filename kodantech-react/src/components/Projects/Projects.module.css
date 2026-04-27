@@ -57,13 +57,22 @@
 }
 
 .proj1 {
-  background: linear-gradient(135deg, #1a0533 0%, #2d0a5e 50%, #0a1a33 100%);
+  background: #0a0c0f;
 }
 .proj2 {
-  background: linear-gradient(135deg, #001a1a 0%, #003333 50%, #001133 100%);
+  background: #0a0c0f;
 }
 .proj3 {
-  background: linear-gradient(135deg, #1a1a00 0%, #2d2d00 50%, #1a0000 100%);
+  background: #0a0c0f;
+}
+.proj4 {
+  background: #0a0c0f;
+}
+.proj5 {
+  background: #0a0c0f;
+}
+.proj6 {
+  background: #0a0c0f;
 }
 
 .projInner {
@@ -72,6 +81,9 @@
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 28px);
 }
 
 .projTopbar {
@@ -80,6 +92,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .projDot {
@@ -99,7 +112,43 @@
 }
 
 .projBody {
-  padding: 12px;
+  padding: 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.proj1 .projBody {
+  background-image: url("../../assets/nest.webp");
+  background-position: center;
+}
+
+.proj2 .projBody {
+  background-image: url("../../assets/VLTG.webp");
+  background-position: left center;
+}
+
+.proj3 .projBody {
+  background-image: url("../../assets/supercake.webp");
+  background-position: left center;
+}
+
+.proj4 .projBody {
+  background-image: url("../../assets/supercakelinkbio.webp");
+  background-position: center;
+}
+
+.proj5 .projBody {
+  background-image: url("../../assets/dentalcare.webp");
+  background-position: center;
+}
+
+.proj6 .projBody {
+  background-image: url("../../assets/advocacia.webp");
+  background-position: center;
 }
 
 .projLine {
@@ -107,6 +156,8 @@
   border-radius: 3px;
   margin-bottom: 6px;
   background: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .projLineShort {
@@ -127,6 +178,8 @@
   display: flex;
   gap: 6px;
   margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .projMiniCard {
@@ -229,6 +282,36 @@
 .visitBtn:hover {
   border-color: var(--cyan);
   color: var(--cyan);
+}
+
+.loadMoreContainer {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.loadMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  font-size: 0.9rem;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.loadMoreBtn:hover {
+  background: var(--cyan);
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 229, 200, 0.3);
 }
 
 @media (max-width: 900px) {
