@@ -1,11 +1,5 @@
 import styles from './Hero.module.css';
 
-const STATS = [
-  { num: '+25', label: 'Clientes satisfeitos' },
-  { num: '100%', label: 'Entregues no prazo' },
-  { num: '3x', label: 'Mais conversões' },
-];
-
 const MOCK_CARD_WIDTHS = ['70%', '80%', '60%'];
 
 export default function Hero() {
@@ -32,18 +26,6 @@ export default function Hero() {
           <a href="#contato" className={styles.btnPrimary}>Iniciar Projeto ↗</a>
           <a href="#projetos" className={styles.btnGhost}>Ver Projetos →</a>
         </div>
-      </div>
-
-      <div className={styles.heroStat}>
-        {STATS.map((stat, i) => (
-          <div key={stat.num} style={{ display: 'contents' }}>
-            {i > 0 && <div className={styles.statDivider} />}
-            <div className={styles.statItem}>
-              <div className={styles.statNum}>{stat.num}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
-          </div>
-        ))}
       </div>
 
       {/* Browser Mockup */}

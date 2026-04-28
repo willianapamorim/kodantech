@@ -11,11 +11,13 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
       <WhatsAppFloat />
     </>
