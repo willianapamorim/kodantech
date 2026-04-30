@@ -52,11 +52,6 @@ export default function About() {
           </svg>
         </div>
 
-        <div className={styles.floatingStat}>
-          <div className={styles.floatingStatNum}>+25</div>
-          <div className={styles.floatingStatLabel}>Projetos entregues</div>
-        </div>
-
         <div className={styles.codeSnippet}>
           <span className={styles.kw}>const</span> site = <span className={styles.fn}>kodantech</span>(<br />
           &nbsp;&nbsp;<span className={styles.str}>&quot;seu-negocio&quot;</span><br />
